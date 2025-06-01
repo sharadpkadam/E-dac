@@ -1,0 +1,71 @@
+/* Default Light Theme */
+body {
+  background-color: #f9faff;
+  color: #333;
+  transition: all 0.3s;
+  scroll-behavior: smooth;
+  height: auto;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #007bff !important;
+}
+
+.nav-link {
+  color: #333 ;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+.btn-outline-primary {
+  border-radius: 20px;
+}
+
+.container h2 {
+  color: #007bff;
+  font-weight: 600;
+}
+
+footer {
+  background-color: #f8f9fa;
+  color: #666;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background-color: #121212;
+  color: whitesmoke;
+}
+
+body.dark-theme .card,
+body.dark-theme .navbar,
+body.dark-theme footer {
+  background-color: #1f1f1f !important;
+  color: #fff !important;
+}
+
+body.dark-theme .form-control {
+  color: #fff !important;
+  border-color: #555 !important;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+body.dark-theme .nav-link {
+  color: whitesmoke !important;
+}
+body.dark-theme .nav-link:hover {
+  color: #aadfff !important;
+}
+

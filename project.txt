@@ -1,0 +1,59 @@
+-- Create Database
+CREATE DATABASE IF NOT EXISTS edac_portal;
+USE edac_portal;
+
+-- Table: modules
+CREATE TABLE modules (
+    module_id INT PRIMARY KEY AUTO_INCREMENT,
+    module_name VARCHAR(100) NOT NULL,
+    description TEXT
+);
+
+-- Table: syllabus
+CREATE TABLE syllabus (
+    syllabus_id INT PRIMARY KEY AUTO_INCREMENT,
+    module_id INT,
+    content TEXT,
+    FOREIGN KEY (module_id) REFERENCES modules(module_id) ON DELETE CASCADE
+);
+
+-- Table: mcqs
+CREATE TABLE mcqs (
+    mcq_id INT PRIMARY KEY AUTO_INCREMENT,
+    module_id INT,
+    question TEXT,
+    option_a VARCHAR(255),
+    option_b VARCHAR(255),
+    option_c VARCHAR(255),
+    option_d VARCHAR(255),
+    correct_option CHAR(1),
+    FOREIGN KEY (module_id) REFERENCES modules(module_id) ON DELETE CASCADE
+);
+
+-- Table: interview_questions
+CREATE TABLE interview_questions (
+    interview_id INT PRIMARY KEY AUTO_INCREMENT,
+    module_id INT,
+    question TEXT,
+    answer TEXT,
+    FOREIGN KEY (module_id) REFERENCES modules(module_id) ON DELETE CASCADE
+);
+
+-- Table: reference_books
+CREATE TABLE reference_books (
+    book_id INT PRIMARY KEY AUTO_INCREMENT,
+    module_id INT,
+    book_title VARCHAR(255),
+    author VARCHAR(255),
+    link VARCHAR(500),
+    FOREIGN KEY (module_id) REFERENCES modules(module_id) ON DELETE CASCADE
+);
+
+-- Table: exam_links
+CREATE TABLE exam_links (
+    exam_id INT PRIMARY KEY AUTO_INCREMENT,
+    module_id INT,
+    exam_title VARCHAR(255),
+    exam_url VARCHAR(500),
+    FOREIGN KEY (module_id) REFERENCES modules(module_id) ON DELETE CASCADE
+);
