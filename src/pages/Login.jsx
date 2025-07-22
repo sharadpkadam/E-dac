@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
-// import img from "../images/img.webp";
 import animation from "../images/animation.json";
 import signin from "../images/signin.json"
 import Lottie from "lottie-react";

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import home from "../images/home_img.png";
 import "./Home.css";
 
@@ -19,7 +20,7 @@ export default function Home() {
               brighter than ever. Step in, stand out, and soar high.
             </p>
             <div className="btn btn-primary" style={{ borderRadius: "10px", width:"auto" }}>
-              Explore Now
+              <Link to="/modules">Explore Now</Link>
             </div>
           </div>
           <div className="home-image">
