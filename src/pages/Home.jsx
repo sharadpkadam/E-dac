@@ -20,7 +20,7 @@ export default function Home() {
               brighter than ever. Step in, stand out, and soar high.
             </p>
             <div className="btn btn-primary" style={{ borderRadius: "10px", width:"auto" }}>
-              <Link to="/modules">Explore Now</Link>
+              <Link to="/modules" style={{ textDecoration: "none", color: "white" }}>Explore Now</Link>
             </div>
           </div>
           <div className="home-image">
